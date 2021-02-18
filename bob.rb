@@ -12,12 +12,17 @@ def bob_responds(sentence)
   elsif sentence[-1] == "?" 
     puts "Sure."
   # all whitespace
+  elsif sentence == ""
+    puts "Fine, be that way."
   # all caps
+  elsif sentence.upcase == sentence && sentence.include? /\w\ # this part is broken. Im not sure how to call a regex
+    puts "Why are you yelling at me?"
     # all caps question
+    #WIP
   # default
   else                      
     puts "Whatever."
   end
 end
 
-bob_responds("Hi there Bob! ")
+bob_responds("")
